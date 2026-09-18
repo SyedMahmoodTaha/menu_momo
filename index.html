@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MomosPoint_menu</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momo Menu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <p class="eyebrow">Fresh & tasty</p>
+        <h1>Menu</h1>
+      </header>
+
+      <main class="menu-list">
+        <section class="menu-group">
+          <h2>Steam</h2>
+
+          <button class="menu-item" data-title="Veg momos" data-description="Soft steamed dumplings filled with fresh vegetables, onion, cabbage, carrot, and a light seasoning for a clean and comforting taste." data-sides="Chili chutney, red sauce">
+            <span>Veg momos</span>
+            <span>60rs</span>
+          </button>
+
+          <button class="menu-item" data-title="Chicken momos" data-description="Juicy chicken filling wrapped in a delicate steamed dumpling shell with a savory bite and soft texture." data-sides="Spicy chutney, mint sauce">
+            <span>Chicken momos</span>
+            <span>80rs</span>
+          </button>
+        </section>
+
+        <section class="menu-group">
+          <h2>Fried</h2>
+
+          <button class="menu-item" data-title="Veg fried momos" data-description="Crispy fried vegetable momos with a golden outside and a flavorful veggie center." data-sides="Tomato ketchup, chili dip">
+            <span>Veg</span>
+            <span>70rs</span>
+          </button>
+
+          <button class="menu-item" data-title="Chicken fried momos" data-description="Crispy chicken dumplings with a rich filling and a crunchy finish." data-sides="Peri-peri dip, schezwan sauce">
+            <span>Chicken</span>
+            <span>90rs</span>
+          </button>
+        </section>
+
+        <section class="menu-group">
+          <h2>Fried items</h2>
+
+          <button class="menu-item" data-title="Fries" data-description="Crispy salted fries with a golden crunch and a simple, satisfying taste." data-sides="Tomato ketchup, mayonnaise">
+            <span>Fries</span>
+            <span>60rs</span>
+          </button>
+
+          <button class="menu-item" data-title="Chicken nuggets" data-description="Crunchy chicken bites with a tender center and a savory seasoning." data-sides="Barbecue sauce, chili mayo">
+            <span>Chicken nuggets</span>
+            <span>80rs</span>
+          </button>
+
+          <button class="menu-item" data-title="Veg nuggets" data-description="Crispy vegetable bites made for a lighter snack with a crunchy finish." data-sides="Sweet chili sauce, ketchup">
+            <span>Veg nuggets</span>
+            <span>60rs</span>
+          </button>
+
+          <button class="menu-item" data-title="Chicken mini kives" data-description="Small, crispy chicken bites with a well-seasoned flavor and crunchy texture." data-sides="Garlic dip, spicy aioli">
+            <span>Chicken mini kives</span>
+            <span>80rs</span>
+          </button>
+
+          <button class="menu-item" data-title="Chicken fried fingers" data-description="Breaded chicken finger strips fried until crisp and served with a savory, crunchy bite." data-sides="Hot sauce, ranch dip">
+            <span>Chicken fried fingers</span>
+            <span>80rs</span>
+          </button>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-backdrop hidden" id="itemModal" aria-hidden="true">
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <button class="close-btn" type="button" aria-label="Close details">×</button>
+        <p class="modal-tag">Item details</p>
+        <h3 id="modalTitle">Menu item</h3>
+        <p id="modalDescription"></p>
+
+        <div class="info-box">
+          <h4>Contains</h4>
+          <p id="modalContains"></p>
+        </div>
+
+        <div class="info-box">
+          <h4>Sides included</h4>
+          <ul id="modalSides"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
 </html>
